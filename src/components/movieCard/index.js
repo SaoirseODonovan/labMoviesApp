@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 import Avatar from '@mui/material/Avatar';
 import { MoviesContext } from "../../contexts/moviesContext";
 
-export default function MovieCard({ movie }) {
+export default function MovieCard({ movie, action }) {
   const { favourites, addToFavourites } = useContext(MoviesContext);
  
    if (favourites.find((id) => id === movie.id)) {
@@ -76,7 +76,7 @@ export default function MovieCard({ movie }) {
     </IconButton>
 
         <Button variant="outlined" size="medium" color="primary">
-        <Link to={`/movies/${movie.id}`}>
+        <Link to={`{action(movie)} /movies/${movie.id}`}>
           <Button variant="outlined" size="medium" color="primary">
             More Info ...
           </Button>
