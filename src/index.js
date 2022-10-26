@@ -8,9 +8,24 @@ import {Link} from 'react-router-dom';
 import MovieReviewPage from "./pages/movieReviewPage";
 import SiteHeader from './components/siteHeader';
 import UpcomingMoviesPage from "./pages/upcomingMoviesPage.js";
+import { QueryClientProvider, QueryClient } from "react-query";
+import { ReactQueryDevtools } from 'react-query/devtools'
+
+//Immediately after the import statements, declare the query client (it will manage the cache in the browser)
+//The above configuration will retain all data in the cache for 1 hour before it becomes invalidated.
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 360000,
+      refetchInterval: 360000, 
+      refetchOnWindowFocus: false
+    },
+  },
+});
 
 const App = () => {
   return (
+    <QueryClientProvider client={queryClient}>
     <BrowserRouter>
       <SiteHeader />      {/* New Header  */}
       <Routes>
@@ -22,6 +37,8 @@ const App = () => {
         <Route exact path="/movies/upcoming" element={<UpcomingMoviesPage />} />
       </Routes>
     </BrowserRouter>
+    <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
   );
 };
 
