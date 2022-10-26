@@ -9,7 +9,8 @@ import MovieReviewPage from "./pages/movieReviewPage";
 import SiteHeader from './components/siteHeader';
 import UpcomingMoviesPage from "./pages/upcomingMoviesPage.js";
 import { QueryClientProvider, QueryClient } from "react-query";
-import { ReactQueryDevtools } from 'react-query/devtools'
+import { ReactQueryDevtools } from 'react-query/devtools';
+import MoviesContextProvider from "./contexts/moviesContext";
 
 //Immediately after the import statements, declare the query client (it will manage the cache in the browser)
 //The above configuration will retain all data in the cache for 1 hour before it becomes invalidated.
@@ -28,6 +29,7 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
     <BrowserRouter>
       <SiteHeader />      {/* New Header  */}
+      <MoviesContextProvider>
       <Routes>
       <Route path="/reviews/:id" element={ <MovieReviewPage /> } />
         <Route exact path="/movies/favourites" element={<favouriteMoviesPage />} />
@@ -36,6 +38,7 @@ const App = () => {
         <Route path="*" element={ <Navigate to="/" /> } />
         <Route exact path="/movies/upcoming" element={<UpcomingMoviesPage />} />
       </Routes>
+      </MoviesContextProvider>
     </BrowserRouter>
     <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
