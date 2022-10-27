@@ -20,6 +20,7 @@ const MoviesContextProvider = (props) => {
       newMustWatch.push(movie.id);
     }
     setMustWatch(newMustWatch);
+    console.log(newMustWatch)
   };
 
   // We will use this function in a later section
