@@ -3,7 +3,9 @@ import React, { useState } from "react";
 export const MoviesContext = React.createContext(null);
 
 const MoviesContextProvider = (props) => {
-  const [favourites, setFavourites, myReviews, setMyReviews,mustWatch,setMustWatch] = useState( [] )
+  const [favourites, setFavourites] = useState( [] ) 
+  const [myReviews, setMyReviews] = useState( [] )
+  const [mustWatch, setMustWatch] = useState( [] )
 
 
   const addToFavourites = (movie) => {
@@ -41,7 +43,6 @@ const MoviesContextProvider = (props) => {
         addToFavourites,
         removeFromFavourites,
         addReview,
-        mustWatch,
         addToMustWatch,
       }}
     >
