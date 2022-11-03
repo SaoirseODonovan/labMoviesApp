@@ -14,6 +14,7 @@ import MoviesContextProvider from "./contexts/moviesContext";
 import AddMovieReviewPage from './pages/addMovieReviewPage';
 import PopularMoviesPage from "./pages/popularMoviesPage.js";
 import TopRatedMoviesPage from "./pages/topRatedMoviesPage.js";
+import TrendingMoviesPage from "./pages/trendingMoviesPage.js";
 
 //Immediately after the import statements, declare the query client (it will manage the cache in the browser)
 //The above configuration will retain all data in the cache for 1 hour before it becomes invalidated.
@@ -43,6 +44,7 @@ const App = () => {
         <Route path="/reviews/form" element={<AddMovieReviewPage/>} />
         <Route path="/movies/popular" element={<PopularMoviesPage />} />
         <Route path="/movies/toprated" element={<TopRatedMoviesPage />} /> 
+        <Route path="/movies/trending" element={<TrendingMoviesPage />} />
       </Routes>
       </MoviesContextProvider>
     </BrowserRouter>
