@@ -13,6 +13,7 @@ import { ReactQueryDevtools } from 'react-query/devtools';
 import MoviesContextProvider from "./contexts/moviesContext";
 import AddMovieReviewPage from './pages/addMovieReviewPage';
 import PopularMoviesPage from "./pages/popularMoviesPage.js";
+import TopRatedMoviesPage from "./pages/topRatedMoviesPage.js";
 
 //Immediately after the import statements, declare the query client (it will manage the cache in the browser)
 //The above configuration will retain all data in the cache for 1 hour before it becomes invalidated.
@@ -41,6 +42,7 @@ const App = () => {
         <Route exact path="/movies/upcoming" element={<UpcomingMoviesPage />} />
         <Route path="/reviews/form" element={<AddMovieReviewPage/>} />
         <Route path="/movies/popular" element={<PopularMoviesPage />} />
+        <Route path="/movies/toprated" element={<TopRatedMoviesPage />} /> 
       </Routes>
       </MoviesContextProvider>
     </BrowserRouter>
