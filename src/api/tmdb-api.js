@@ -129,9 +129,9 @@ export const getTrendingMovies = (args) => {
   });
 };
 
-export const getSimilarMovies = (args) => {
+export const getSimilarMovies = (id) => {
   return fetch(
-    `https://api.themoviedb.org/3/movie/{movie_id}/similar?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
+    `https://api.themoviedb.org/3/movie/${id}/similar?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
   ).then((response) => {
     if (!response.ok) {
       throw new Error(response.json().message);

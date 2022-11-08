@@ -1,10 +1,10 @@
 //same as trendingMoviesPage
 import React from "react";
 import PageTemplate from "../components/templateMovieListPage";
-import { useQuery } from 'react-query'
-import Spinner from '../components/spinner'
-import AddToPlaylistIcon from '../components/cardIcons/addToMustWatch'
-import {getSimilarMovies} from '../api/tmdb-api'
+import { useQuery } from 'react-query';
+import Spinner from '../components/spinner';
+import AddToPlaylistIcon from '../components/cardIcons/addToMustWatch';
+import {getSimilarMovies} from '../api/tmdb-api';
 
 const SimilarMoviesPage = (props) => {
     const {data, error, isLoading, isError}  = useQuery('similar', getSimilarMovies)

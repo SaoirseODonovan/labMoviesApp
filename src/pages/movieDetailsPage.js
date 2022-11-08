@@ -6,6 +6,7 @@ import useMovie from "../hooks/useMovie";
 import { getMovie } from '../api/tmdb-api'
 import { useQuery } from "react-query";
 import Spinner from '../components/spinner'
+import { Link } from 'react-router-dom';
 
 const MovieDetailsPage = (props) => {
   const { id } = useParams();
@@ -30,6 +31,14 @@ const MovieDetailsPage = (props) => {
           <PageTemplate movie={movie}>
             <MovieDetails movie={movie} />
           </PageTemplate>
+          <div className="col-4">
+                <Link
+                  className="btn btn-primary"
+                  to={`/movies/${id}/similar`}
+                >
+                  Click here to see similar movies!
+                </Link>
+          </div>
         </>
       ) : (
         <p>Waiting for movie details</p>
