@@ -16,6 +16,7 @@ import PopularMoviesPage from "./pages/popularMoviesPage.js";
 import TopRatedMoviesPage from "./pages/topRatedMoviesPage.js";
 import TrendingMoviesPage from "./pages/trendingMoviesPage.js";
 import SimilarMoviesPage from "./pages/similarMoviesPage";
+import MovieActorsPage from "./pages/movieActorsPage";
 
 //Immediately after the import statements, declare the query client (it will manage the cache in the browser)
 //The above configuration will retain all data in the cache for 1 hour before it becomes invalidated.
@@ -48,6 +49,7 @@ const App = () => {
         <Route path="/movies/trending" element={<TrendingMoviesPage />} />
         {/* <Route path="/movies/similar" element={<SimilarMoviesPage />} /> */}
         <Route path="/movies/:id/similar" element={<SimilarMoviesPage />} />
+        <Route path="/actors" element={<MovieActorsPage />} />
       </Routes>
       </MoviesContextProvider>
     </BrowserRouter>
