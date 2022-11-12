@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Header from "../headerMovieList";
 import FilterCard from "../filterMoviesCard";
-import MovieActorsList from "../movieActorsList";
 import Grid from "@mui/material/Grid";
+import MovieActorList from "../movieActorList";
 
 function MovieActorsListPageTemplate({ actors, title, action }) {
   const [nameFilter, setNameFilter] = useState("");
@@ -28,7 +28,7 @@ function MovieActorsListPageTemplate({ actors, title, action }) {
             titleFilter={nameFilter}
           />
         </Grid>
-        <MovieActorsList action={action} movies={displayedMovieActors}></MovieActorsList>
+        <MovieActorList action={action} movies={displayedMovieActors}></MovieActorList>
       </Grid>
     </Grid>
   );
