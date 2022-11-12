@@ -1,8 +1,7 @@
 import React from "react";
-import PageTemplate from "../components/templateMovieListPage";
+import PageTemplate from "../components/templateMovieActorsListPage";
 import { useQuery } from 'react-query'
 import Spinner from '../components/spinner'
-import AddToPlaylistIcon from '../components/cardIcons/addToMustWatch'
 import {getMovieActors} from '../api/tmdb-api'
 
 const MovieActorsPage = (props) => {

@@ -1,19 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
+// import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import CardHeader from "@mui/material/CardHeader";
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import CalendarIcon from "@mui/icons-material/CalendarTodayTwoTone";
-import StarRateIcon from "@mui/icons-material/StarRate";
-import IconButton from "@mui/material/IconButton";
-import Grid from "@mui/material/Grid";
+// import FavoriteIcon from "@mui/icons-material/Favorite";
+// import CalendarIcon from "@mui/icons-material/CalendarTodayTwoTone";
+// import StarRateIcon from "@mui/icons-material/StarRate";
+// import IconButton from "@mui/material/IconButton";
+// import Grid from "@mui/material/Grid";
 import img from '../../images/film-poster-placeholder.png'
-import Avatar from '@mui/material/Avatar';
+// import Avatar from '@mui/material/Avatar';
 
 export default function MovieActorCard(props){
   const actor = props.actor;
@@ -36,11 +36,11 @@ export default function MovieActorCard(props){
         }
       />
       <CardContent>
-      </CardContent>
-      <CardActions disableSpacing>
+      {/* <CardActions disableSpacing> */}
         <Link to={`/actors/${actor.id}`}>
         </Link>
-      </CardActions>
+      {/* </CardActions> */}
+      </CardContent>
     </Card>
   );
 }
