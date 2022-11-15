@@ -11,7 +11,7 @@ function MovieActorsListPageTemplate({ actors, title, action }) {
     .filter((m) => {
       return m.name.toLowerCase().search(nameFilter.toLowerCase()) !== -1;
     });
-
+ console.log(displayedMovieActors)
   const handleChange = (type, value) => {
     if (type === "name") setNameFilter(value);
   };
@@ -28,7 +28,7 @@ function MovieActorsListPageTemplate({ actors, title, action }) {
             titleFilter={nameFilter}
           />
         </Grid>
-        <MovieActorList action={action} movies={displayedMovieActors}></MovieActorList>
+        <MovieActorList action={action} actors={displayedMovieActors}></MovieActorList>
       </Grid>
     </Grid>
   );

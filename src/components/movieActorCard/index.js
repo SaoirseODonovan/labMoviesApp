@@ -12,32 +12,31 @@ import Typography from "@mui/material/Typography";
 // import StarRateIcon from "@mui/icons-material/StarRate";
 // import IconButton from "@mui/material/IconButton";
 // import Grid from "@mui/material/Grid";
-import img from '../../images/film-poster-placeholder.png'
+import img from '../../images/film-poster-placeholder.png'//
 // import Avatar from '@mui/material/Avatar';
 
 export default function MovieActorCard(props){
-  const actor = props.actor;
-
+  const actors = props.actors;
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
         title={
           <Typography variant="h5" component="p">
-            {actor.name}{" "}
+            {actors.name}{" "}
           </Typography>
         }
       />
       <CardMedia
         sx={{ height: 500 }}
         image={
-          actor.profile_path
-            ? `https://image.tmdb.org/t/p/w500/${actor.profile_path}`
+          actors.profile_path
+            ? `https://image.tmdb.org/t/p/w500/${actors.profile_path}`
             : img
         }
       />
       <CardContent>
       {/* <CardActions disableSpacing> */}
-        <Link to={`/actors/${actor.id}`}>
+        <Link to={`/actors/${actors.id}`}>
         </Link>
       {/* </CardActions> */}
       </CardContent>
