@@ -34,8 +34,8 @@ const MovieDetailsPage = (props) => {
           <div className="col-4">
                 <Link
                   className="btn btn-primary"
-                  //to={`/movies/${id}/similar`}
-                  to={`/movies/similar`}
+                  to={`/movies/${id}/similar`}
+                  // to={`/movies/similar`}
                 >
                   Click here to see similar movies!
                 </Link>
