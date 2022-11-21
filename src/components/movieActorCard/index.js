@@ -39,6 +39,7 @@ export default function MovieActorCard(props){
         <Link to={`/actors/${actors.id}`}>
         </Link>
       {/* </CardActions> */}
+      {"Actor popularity rating: "} {actors.popularity}{" "}
       </CardContent>
     </Card>
   );
