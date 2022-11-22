@@ -129,22 +129,22 @@ export const getTrendingMovies = (args) => {
   });
 };
 
-// export const getSimilarMovies = ({ queryKey }) => {
-//   const [, idPart] = queryKey;
-//   const { id } = idPart;
-//   return fetch(
-//     `https://api.themoviedb.org/3/movie/${id}/similar?api_key=api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
-//   ).then( (response) => {
-//     if (!response.ok) {
-//       throw new Error(response.json().message);
-//     }
-//     return response.json();
+export const getSimilarMovies = ({ queryKey }) => {
+  const [, idPart] = queryKey;
+  const { id } = idPart;
+  return fetch(
+    `https://api.themoviedb.org/3/movie/${id}/similar?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
+  ).then( (response) => {
+    if (!response.ok) {
+      throw new Error(response.json().message);
+    }
+    return response.json();
 
-//   })
-//   .catch((error) => {
-//     throw error
-//  });
-// };
+  })
+  .catch((error) => {
+    throw error
+ });
+};
 
 // export const getSimilarMovies = (args) => {
 //   return fetch(
@@ -160,16 +160,16 @@ export const getTrendingMovies = (args) => {
 //   });
 // };
 
-export const getSimilarMovies = (id) => {
-  return fetch(
-    `https://api.themoviedb.org/3/movie/${id}/similar?api_key=${process.env.REACT_APP_TMDB_KEY}`
-  )
-    .then((res) => res.json())
-    .then((json) => {
-      // console.log(json.results);
-      return json.results;
-    });
-};
+// export const getSimilarMovies = (id) => {
+//   return fetch(
+//     `https://api.themoviedb.org/3/movie/${id}/similar?api_key=${process.env.REACT_APP_TMDB_KEY}`
+//   )
+//     .then((res) => res.json())
+//     .then((json) => {
+//       // console.log(json.results);
+//       return json.results;
+//     });
+// };
 
 
 export const getMovieActors = () => {
