@@ -1,15 +1,16 @@
 import React from "react";
-import MovieHeader from "../headerMovie";
+// import MovieHeader from "../headerMovie";
 import Grid from "@mui/material/Grid";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import { getMovieActorImages } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
+import MovieActorHeader from "../headerMovieActor";
 
-const TemplateMovieActorsPage = ({ actor, children }) => {
+const TemplateMovieActorsPage = ({ actors, children }) => {
   const { data , error, isLoading, isError } = useQuery(
-    ["images", { id: actor.id }],
+    ["images", { id: actors.id }],
     getMovieActorImages
   );
 
@@ -20,11 +21,11 @@ const TemplateMovieActorsPage = ({ actor, children }) => {
   if (isError) {
     return <h1>{error.message}</h1>;
   }
-  const images = data.posters 
+  const images = data.profiles
 
   return (
     <>
-      <MovieHeader actor={actor} />
+      <MovieActorHeader actors={actors} />
 
       <Grid container spacing={5} sx={{ padding: "15px" }}>
         <Grid item xs={3}>
