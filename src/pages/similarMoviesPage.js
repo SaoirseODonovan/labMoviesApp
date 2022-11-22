@@ -65,7 +65,7 @@ const SimilarMoviesPage = (props) => {
         <>
           <PageTemplate 
           title="Similar Movies"
-          movie={similar}>
+          movies={similar}>
             {/* <MovieDetails movie={movie} /> */}
           </PageTemplate>
         </>
