@@ -43,6 +43,18 @@ const MovieActorDetails = ({ actors }) => {  // Don't miss this!
          <Chip
          label={`${actors.popularity}`}
         />
+        
+        <Chip
+         label={`${actors.birthday}`}
+        />
+
+         <Chip
+         label={`${actors.place_of_birth}`}
+        />
+
+         <Chip
+         label={`${actors.known_for_department}`}
+        />
 
         </Paper>
 
