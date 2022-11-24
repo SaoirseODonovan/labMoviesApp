@@ -42,7 +42,7 @@ export default function MovieActorCard(props){
           </Button>
         </Link>
       {/* </CardActions> */}
-      {"Actor popularity rating: "} {actors.popularity}{" "}
+      {/* {"Actor popularity rating: "} {actors.popularity}{" "} */}
       </CardContent>
     </Card>
   );
