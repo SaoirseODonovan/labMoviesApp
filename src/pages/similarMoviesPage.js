@@ -9,6 +9,7 @@ import AddToFavouritesIcon from '../components/cardIcons/addToFavourites'
 const SimilarMoviesPage = (props) => {
   const { id } = useParams();
   const { data: similar, error, isLoading, isError } = useQuery(
+    // the cache entry key is a serializable array
     ["similar", { id: id }],
     getSimilarMovies
   );
