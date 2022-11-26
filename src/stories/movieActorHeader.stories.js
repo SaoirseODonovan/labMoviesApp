@@ -13,6 +13,6 @@ export default {
   ],
 };
 
-export const Basic = () => <MovieActorHeader actors="Movie Actors" />;
+export const Basic = () => <MovieActorHeader title="Movie Actors" />;
 
 Basic.storyName = "Default";

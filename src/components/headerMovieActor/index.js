@@ -4,13 +4,11 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Paper from "@mui/material/Paper";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import HomeIcon from "@mui/icons-material/Home";
 import { useNavigate } from "react-router-dom";
 
 const MovieActorHeader = (props) => {
-  const actors = props.actors;
+  const title = props.title;
   const navigate = useNavigate();
-
   return (
     <Paper 
         component="div" 
@@ -27,7 +25,7 @@ const MovieActorHeader = (props) => {
       </IconButton>
 
       <Typography variant="h4" component="h3">
-        {actors.title}
+        {title}
         <br />
       </Typography>
 

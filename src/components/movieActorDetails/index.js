@@ -9,7 +9,6 @@ import Fab from "@mui/material/Fab";
 import Typography from "@mui/material/Typography";
 import Drawer from "@mui/material/Drawer";
 import MovieReviews from "../movieReviews";
-import { StarBorder } from "@mui/icons-material";
 
 // A Drawer component is either visible (open) or hidden. We control this with a boolean state variable - drawerOpen.
 
