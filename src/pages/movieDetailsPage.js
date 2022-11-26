@@ -30,8 +30,7 @@ const MovieDetailsPage = (props) => {
         <>
           <PageTemplate movie={movie}>
             <MovieDetails movie={movie} />
-          </PageTemplate>
-          <div className="col-4">
+            <div className="col-4">
                 <Link
                   className="btn btn-primary"
                   to={`/movies/${id}/similar`}
@@ -40,6 +39,7 @@ const MovieDetailsPage = (props) => {
                   Click here to see similar movies!
                 </Link>
           </div>
+          </PageTemplate>
         </>
       ) : (
         <p>Waiting for movie details</p>
