@@ -7,19 +7,26 @@ import CardMedia from "@mui/material/CardMedia";
 import CardHeader from "@mui/material/CardHeader";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-// import FavoriteIcon from "@mui/icons-material/Favorite";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 // import CalendarIcon from "@mui/icons-material/CalendarTodayTwoTone";
 // import StarRateIcon from "@mui/icons-material/StarRate";
 // import IconButton from "@mui/material/IconButton";
 // import Grid from "@mui/material/Grid";
 import img from '../../images/film-poster-placeholder.png'//
-// import Avatar from '@mui/material/Avatar';
+import Avatar from '@mui/material/Avatar';
 
 export default function MovieActorCard(props){
   const actors = props.actors;
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
+      avatar={
+        actors.favourite ? (
+          <Avatar sx={{ backgroundColor: 'red' }}>
+            <FavoriteIcon />
+          </Avatar>
+        ) : null
+      }
         title={
           <Typography variant="h5" component="p">
             {actors.name}{" "}
