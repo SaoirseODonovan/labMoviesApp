@@ -16,7 +16,7 @@ const MovieActorDetailsPage = (props) => {
     getMovieActorsDetails
   );
 
-  console.log(actors)
+  //console.log(actors)
   if (isLoading) {
     return <Spinner />;
   }
