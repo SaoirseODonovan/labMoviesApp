@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from "react";
+//, useContext
 import PageTemplate from "../components/templateMovieListPage";
 import {getUpcomingMovies} from '../api/tmdb-api';
 import Spinner from '../components/spinner';
 import MustWatchIcon from '../components/cardIcons/addToMustWatch'
 import { useQuery } from 'react-query';
+// import { NumberingContext } from "../contexts/numberingContext";
+
 
 const UpcomingMoviesPage = (props) => {
+
+  // const {setPageFunc} = useContext(NumberingContext);
+  
   const {  data, error, isLoading, isError }  = useQuery('upcoming', getUpcomingMovies)
 
   //using the home page code here
