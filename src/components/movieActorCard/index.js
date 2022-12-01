@@ -15,6 +15,7 @@ import IconButton from "@mui/material/IconButton";
 
 export default function MovieActorCard({actors,action}){
 const {favourites,addToFavourites} = useContext(MovieActorContext);
+console.log(favourites)
 
 if (favourites.find((id) => id === actors.id)) {
   actors.favourite = true;
