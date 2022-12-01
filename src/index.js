@@ -19,6 +19,7 @@ import SimilarMoviesPage from "./pages/similarMoviesPage.js";
 import MovieActorsPage from "./pages/movieActorsPage.js";
 import MovieActorDetailsPage from "./pages/movieActorDetailsPage";
 import FavouriteMovieActorsPage from "./pages/favouriteMovieActorsPage";
+import MovieActorContextProvider from "./contexts/movieActorContext";
 
 //Immediately after the import statements, declare the query client (it will manage the cache in the browser)
 //The above configuration will retain all data in the cache for 1 hour before it becomes invalidated.
@@ -38,6 +39,7 @@ const App = () => {
     <BrowserRouter>
       <SiteHeader />      {/* New Header  */}
       <MoviesContextProvider>
+        <MovieActorContextProvider>
       <Routes>
       <Route path="/reviews/:id" element={ <MovieReviewPage /> } />
         <Route exact path="/movies/favourites" element={<FavouriteMoviesPage />} />
@@ -55,6 +57,7 @@ const App = () => {
         <Route path="/actors/:id" element={<MovieActorDetailsPage />} />
         <Route path="/actors/favourites" element={<FavouriteMovieActorsPage />} />
       </Routes>
+      </MovieActorContextProvider>
       </MoviesContextProvider>
     </BrowserRouter>
     <ReactQueryDevtools initialIsOpen={false} />
