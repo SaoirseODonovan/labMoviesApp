@@ -3,7 +3,8 @@ import { useParams } from 'react-router-dom';
 import MovieActorDetails from "../components/movieActorDetails";
 import PageTemplate from "../components/templateMovieActorsPage";
 // import useMovie from "../hooks/useMovie";
-import { getMovieActorsDetails } from '../api/tmdb-api'
+// import { getMovieActorsDetails } from '../api/tmdb-api'
+import { getMovieActor } from "../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from '../components/spinner'
 
@@ -13,7 +14,7 @@ const MovieActorDetailsPage = (props) => {
 
   const { data: actors, error, isLoading, isError } = useQuery(
     ["actors", { id: id }],
-    getMovieActorsDetails
+    getMovieActor
   );
 
   //console.log(actors)
