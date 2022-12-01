@@ -5,6 +5,7 @@ import { MemoryRouter } from "react-router";
 import { action } from "@storybook/addon-actions";
 import Grid from "@mui/material/Grid";
 import MovieActorContextProvider from "../contexts/movieActorContext";
+import AddToFavouritesIcon from "../components/cardIcons/addToFavourites";
 
 export default {
   title: "Movie Actor Details Page/MovieActorList",
@@ -27,6 +28,7 @@ export const Basic = () => {
     <Grid container spacing={5}>
       <MovieActorList
         actors={actors}
+        action={(actors) => <AddToFavouritesIcon actors={actors} />}
       />
     </Grid>
   );
