@@ -40,19 +40,19 @@ const MovieActorDetails = ({ actors }) => {  // Don't miss this!
         sx={root}
       >
          <Chip
-         label={`${actors.popularity}`}
+         label={`Popularity rating: ${actors.popularity}`}
         />
         
         <Chip
-         label={`${actors.birthday}`}
+         label={`Date of birth: ${actors.birthday}`}
         />
 
          <Chip
-         label={`${actors.place_of_birth}`}
+         label={`Birthplace: ${actors.place_of_birth}`}
         />
 
          <Chip
-         label={`${actors.known_for_department}`}
+         label={`Best known for: ${actors.known_for_department}`}
         />
 
         </Paper>
