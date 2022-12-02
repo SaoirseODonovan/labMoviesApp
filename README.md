@@ -72,7 +72,7 @@ The new stories are:
 
 >Shows a new view/page that displays movies that are currently trending. 
 
-![ ](./images/top-rated.png)
+![ ](./images/toprated-movies.png)
 
 >Shows a new view/page that displays movies that are rated the highest.
 
