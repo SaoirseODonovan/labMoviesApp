@@ -53,9 +53,14 @@ npm install
 
 ### Component catalogue.
 
-[ Insert a screenshot from the Storybook UI, and highlight the stories that relate to your __new/modified components__ - see the example screenshot below.] .......
+>Below is a screenshot of the Storybook UI, I have added all of the sections under the 'Movie Actor Details Page' heading. 
 
-e.g.
+The new stories are:
++ MovieActorDetails
++ MovieActorHeader
++ MovieActorList
++ MovieActorListHeader
++ MovieActorsPageHeader
 
 ![](./images/storybook.png)
 
@@ -63,13 +68,38 @@ e.g.
 
 [ Insert screenshots of the __new app pages__ you developed (including modified existing pages), Have an appropriate caption for each one (see example below).
 
-![ ](./images/detail.png)
+![ ](./images/trending-movies.png)
 
->Shows detailed information on a movie. Clicking the 'Reviews' floating action button will display extracts from critic reviews.
+>Shows a new view/page that displays movies that are currently trending. 
 
-![ ](./images/review.png)
+![ ](./images/top-rated.png)
 
->Shows the full review for a movie.
+>Shows a new view/page that displays movies that are rated the highest.
+
+![ ](./images/popular-movies.png)
+
+>Shows a new view/page that displays movies that are most popular.
+
+![ ](./images/actors.png)
+
+>Shows a new view/page that displays an added data model of actors that are popular.
+
+![ ](./images/actors-bio.png)
+
+>Shows a new details page that displays the biography of the actors listed on the actors page, this view is shown when the 'more info' button is clicked on within the actors card.
+
+![ ](./images/favourite-actors.png)
+
+>Shows a new view/page that displays all of the actors that have been favourited - like how it was done in the labs with movies.
+
+![ ](./images/modified-movie-details.png)
+
+>On the movie details page, accessed when the 'more info' button is clicked in relation to one of the showing movies, I have added a button labelled 'Click here to see similiar movies!'.
+
+![ ](./images/similar-movies.png)
+
+>Shows a new view/page that displays similar movies to the movie that the user had selected.
+
 
 ### Routing.
 
