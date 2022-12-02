@@ -57,7 +57,7 @@ npm install
 
 e.g.
 
-![](./images/stories.png)
+![](./images/storybook.png)
 
 ### UI Design.
 
