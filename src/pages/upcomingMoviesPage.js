@@ -5,6 +5,7 @@ import {getUpcomingMovies} from '../api/tmdb-api';
 import Spinner from '../components/spinner';
 import MustWatchIcon from '../components/cardIcons/addToMustWatch'
 import { useQuery } from 'react-query';
+// would be used for pagination but was unable to get working
 // import { NumberingContext } from "../contexts/numberingContext";
 
 

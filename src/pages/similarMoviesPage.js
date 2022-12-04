@@ -14,7 +14,6 @@ const SimilarMoviesPage = (props) => {
     getSimilarMovies
   );
   console.log(similar)
-  // const {data, error, isLoading, isError}  = useQuery('similar', getSimilarMovies)
   if (isLoading) return <Spinner/>
   if (isError) return <h1>{error.message}</h1>
    const movies = similar.results;  // *******************
