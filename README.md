@@ -29,6 +29,7 @@ Used the React framework to design and develop an extension of the Movies Fan ap
 + Storybook support.
 + Added filtering by Actor name. 
 + Caching support.
++ New pages/views.
 
 ## Setup requirements.
 
